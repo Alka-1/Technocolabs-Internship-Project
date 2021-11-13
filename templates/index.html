@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<!--      <meta charset="UTF-8">-->
+<!--      <title>ML API</title>-->
+<!--      <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>-->
+<!--        <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>-->
+<!--        <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>-->
+<!--        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>-->
+<!--        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">-->
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict if user will skip this Song.</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+<!--    	<input type="text" name="acousticness" placeholder="Acousticness" required="required" />-->
+<!--        <input type="text" name="Energy" placeholder="Energy" required="required" />-->
+<!--		<input type="text" name="danceability" placeholder="Danceability" required="required" />-->
+
+        <input type="text" name="acousticness" placeholder="Acousticness" required="required" />
+        <input type="text" name="beat_strength" placeholder="Beat_strength" required="required" />
+        <input type="text" name="bounciness" placeholder="Bounciness" required="required" />
+        <input type="text" name="danceability" placeholder="Danceability" required="required" />
+        <input type="text" name="dyn_range_mean" placeholder="Dyn_range_mean" required="required" />
+        <input type="text" name="energy" placeholder="Energy" required="required" />
+        <input type="text" name="flatness" placeholder="Flatness" required="required" />
+        <input type="text" name="instrumentalness" placeholder="Instrumentalness" required="required" />
+        <input type="text" name="key" placeholder="Key" required="required" />
+        <input type="text" name="liveness" placeholder="Liveness" required="required" />
+        <input type="text" name="loudness" placeholder="Loudness" required="required" />
+        <input type="text" name="mechanism" placeholder="Mechanism" required="required" />
+        <input type="text" name="organism" placeholder="Organism" required="required" />
+        <input type="text" name="speechiness" placeholder="Speechiness" required="required" />
+        <input type="text" name="tempo" placeholder="Tempo" required="required" />
+        <input type="text" name="time_signature" placeholder="Time_signature" required="required" />
+        <input type="text" name="valence" placeholder="Valence" required="required" />
+        <input type="text" name="acoustic_vector_0" placeholder="Acoustic_vector_0" required="required" />
+        <input type="text" name="acoustic_vector_1" placeholder="Acoustic_vector_1" required="required" />
+        <input type="text" name="acoustic_vector_2" placeholder="Acoustic_vector_2" required="required" />
+        <input type="text" name="acoustic_vector_3" placeholder="Acoustic_vector_3" required="required" />
+        <input type="text" name="acoustic_vector_4" placeholder="Acoustic_vector_4" required="required" />
+        <input type="text" name="acoustic_vector_5" placeholder="Acoustic_vector_5" required="required" />
+        <input type="text" name="acoustic_vector_6" placeholder="Acoustic_vector_6" required="required" />
+        <input type="text" name="acoustic_vector_7" placeholder="Acoustic_vector_7" required="required" />
+        <input type="text" name="mode_major" placeholder="Mode_major" required="required" />
+        <input type="text" name="mode_minor" placeholder="Mode_minor" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+</body>
+</html>
